@@ -1,0 +1,19 @@
+# 编译产物（可由源码重新生成，不入库）
+cmake-build-*/
+build/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+
+# IDE 本地配置（含本机绝对路径，别人用不上）
+.idea/
+.vscode/
+.cproject
+.project
+
+# 系统临时文件
+Thumbs.db
+.DS_Store
