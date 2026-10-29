@@ -130,7 +130,11 @@ Info : flash size = 64 KiB
 
 ## 六、验收演示
 
-完整演示视频见仓库根目录 **`流水灯验收.mp4`**（未剪辑，一次录完），内容依次为：
+![三灯 500ms 流水灯](demo.gif)
+
+> 上图为从完整验收视频中截取的 7.5s~18s 片段（板子特写），完整过程请见下方视频。
+
+完整演示视频见仓库根目录 **`demo.mp4`**（未剪辑，一次录完，19 秒 / 5.1MB），内容依次为：
 
 1. CLion 中 Rebuild，输出 `[100%] Built target led-0.elf`
 2. 点击 Run，OpenOCD 连接 ST-Link 并烧录
@@ -138,6 +142,10 @@ Info : flash size = 64 KiB
 4. 开发板上三颗 LED 以 500ms 间隔轮流点亮
 
 烧录成功的 Run 窗口日志截图见 **`run-log.png`**。
+
+**关于观看视频**：GitHub 的文件页面不提供在线播放器，点开 `demo.mp4` 只会看到 Download 按钮，
+这是平台行为，不是文件损坏。请点 **Download**（或 **Raw**）下载到本地后用播放器打开；
+若下载缓慢，多为 `raw.githubusercontent.com` 在国内访问受限所致，可换网络重试。
 
 ## 七、目录结构
 
@@ -151,6 +159,7 @@ Info : flash size = 64 KiB
 ├── CMakeLists.txt                # 工程构建脚本（含 arm-none-eabi 交叉编译配置）
 ├── STM32F103C8TX_FLASH.ld        # 链接脚本
 ├── led-0.ioc                     # CubeMX 工程文件（含 LED0/1/2 User Label）
-├── 流水灯验收.mp4                 # 验收演示视频
+├── demo.mp4                      # 验收演示视频（完整过程）
+├── demo.gif                      # 流水灯动图（视频片段，README 中直接显示）
 └── run-log.png                   # 烧录成功日志截图
 ```
